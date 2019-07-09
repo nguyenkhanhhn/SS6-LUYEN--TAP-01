@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input"/>
+<button type="button" onclick="starname()">Chòm sao</button>
+<div id="chomsao"></div>
+<script>
+    function starname() {
+        let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let aquar = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let chon = document.getElementById('input').value;
+        for (i = 0; i < star.length; i++) {
+            if (chon === star[i]) {
+                document.getElementById('chomsao').innerHTML = aquar[i];
+
+            } else {
+                if (chon === aquar[i]) {
+                    document.getElementById('chomsao').innerHTML = star[i];
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
